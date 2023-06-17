@@ -1,0 +1,5 @@
+IP: 62.84.119.229;
+name_taski: https://thetaski.ddnsking.com/;
+name_kittygram: https://thekittygram.ddnsking.com/;
+login: tuser;
+password: 09876; 
