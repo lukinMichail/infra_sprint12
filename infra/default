@@ -40,27 +40,3 @@ server {
 
 
 }
-
-server {
-    server_name tasksprogect.sytes.net;
-    
-    location /api/ {
-        proxy_pass http://127.0.0.1:8080;
-    }
-
-    location /admin/ {
-        proxy_pass http://127.0.0.1:8080;
-    }
-    
-    location / {
-        root   /var/www/taski;
-        index  index.html index.htm;
-        try_files $uri /index.html;
-    }
-
-    listen 443 ssl;
-    ssl_certificate /etc/letsencrypt/live/tasksprogect.sytes.net/fullchain.pem;
-    ssl_certificate_key /etc/letsencrypt/live/tasksprogect.sytes.net/privkey.pem;
-    include /etc/letsencrypt/options-ssl-nginx.conf;
-    ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
-}
